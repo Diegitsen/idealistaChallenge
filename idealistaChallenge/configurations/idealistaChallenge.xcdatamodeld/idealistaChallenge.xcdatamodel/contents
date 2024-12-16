@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PropertyEntity" representedClassName="PropertyEntity" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String"/>
+        <attribute name="amount" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="bathrooms" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="countryRaw" optional="YES" attributeType="String"/>
+        <attribute name="currencySuffix" optional="YES" attributeType="String"/>
+        <attribute name="district" optional="YES" attributeType="String"/>
+        <attribute name="floor" optional="YES" attributeType="String"/>
+        <attribute name="hasAirConditioning" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="hasBoxRoom" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="hasExterior" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="info" optional="YES" attributeType="String"/>
+        <attribute name="latitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="municipality" optional="YES" attributeType="String"/>
+        <attribute name="neighborhood" optional="YES" attributeType="String"/>
+        <attribute name="operationRaw" optional="YES" attributeType="String"/>
+        <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="propertyTypeRaw" optional="YES" attributeType="String"/>
+        <attribute name="province" optional="YES" attributeType="String"/>
+        <attribute name="rooms" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="size" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="thumbnail" optional="YES" attributeType="String"/>
+        <relationship name="picturesRaw" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PropertyPictureEntity" inverseName="parentProperty" inverseEntity="PropertyPictureEntity"/>
+    </entity>
+    <entity name="PropertyPictureEntity" representedClassName="PropertyPictureEntity" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="tag" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="parentProperty" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PropertyEntity" inverseName="picturesRaw" inverseEntity="PropertyEntity"/>
+    </entity>
+</model>
