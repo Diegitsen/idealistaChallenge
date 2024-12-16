@@ -9,7 +9,7 @@ import Foundation
 
 class PropertyRepository {
     
-//    private let localDatasource = PerformanceLocalDatasource()
+    private let localDatasource = PropertyLocalDatasource()
     private let remoteDatasource = PropertyRemoteDatasource()
 
     

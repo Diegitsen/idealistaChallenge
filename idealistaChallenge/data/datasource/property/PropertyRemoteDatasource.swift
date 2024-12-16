@@ -9,7 +9,7 @@ import Foundation
 
 class PropertyRemoteDatasource {
     
-//    private let localDatasource = PerformanceLocalDatasource()
+    private let localDatasource = PropertyLocalDatasource()
     
     func getListOfProperties(onRemoteDataCallback: (PropertyServiceResponse) -> Void) async {
         do {
@@ -20,13 +20,13 @@ class PropertyRemoteDatasource {
             let cloudProperties = fetchedData.map(CloudProperty.init(json:))
             var properties: [PropertyEntity] = []
             await cloudProperties.asyncForEach { cloudProperty in
-//                let property = await localDatasource.savePerformance(cloudPerformanceResponse: cloudPerformance)
-//                performances.append(performance)
+                let property = await localDatasource.saveProperty(cloudProperty: cloudProperty)
+                properties.append(property)
             }
             let propertyServiceResponse = PropertyServiceResponse(
                 isSuccessful: true,
                 errorCode: nil,
-                listOfProperties: cloudProperties)
+                listOfProperties: properties)
             onRemoteDataCallback(propertyServiceResponse)
         } catch {
             print("ERROR: \(error.localizedDescription)")
@@ -39,5 +39,5 @@ class PropertyRemoteDatasource {
 struct PropertyServiceResponse: Equatable {
     let isSuccessful: Bool
     let errorCode: Int?
-    let listOfProperties: [CloudProperty]?
+    let listOfProperties: [PropertyEntity]?
 }

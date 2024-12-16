@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E62E2E62D0FC954003D10EB /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62E2E52D0FC954003D10EB /* SequenceExtensions.swift */; };
+		1E62E2E82D0FCC8D003D10EB /* PropertyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62E2E72D0FCC8D003D10EB /* PropertyCell.swift */; };
+		1E62E2EA2D0FD37A003D10EB /* UIImageViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E62E2E92D0FD37A003D10EB /* UIImageViewExtensions.swift */; };
 		1E8FA5302D0C6BD000C02D5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FA52F2D0C6BD000C02D5E /* AppDelegate.swift */; };
 		1E8FA5322D0C6BD000C02D5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FA5312D0C6BD000C02D5E /* SceneDelegate.swift */; };
 		1E8FA5342D0C6BD000C02D5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FA5332D0C6BD000C02D5E /* ViewController.swift */; };
 		1E8FA5372D0C6BD000C02D5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8FA5352D0C6BD000C02D5E /* Main.storyboard */; };
-		1E8FA53A2D0C6BD000C02D5E /* idealistaChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FA5382D0C6BD000C02D5E /* idealistaChallenge.xcdatamodeld */; };
 		1E8FA53C2D0C6BD500C02D5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E8FA53B2D0C6BD500C02D5E /* Assets.xcassets */; };
 		1E8FA53F2D0C6BD500C02D5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E8FA53D2D0C6BD500C02D5E /* LaunchScreen.storyboard */; };
 		1E8FA54A2D0C6BD600C02D5E /* idealistaChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E8FA5492D0C6BD600C02D5E /* idealistaChallengeTests.swift */; };
@@ -57,6 +59,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E62E2E52D0FC954003D10EB /* SequenceExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
+		1E62E2E72D0FCC8D003D10EB /* PropertyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyCell.swift; sourceTree = "<group>"; };
+		1E62E2E92D0FD37A003D10EB /* UIImageViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtensions.swift; sourceTree = "<group>"; };
 		1E8FA52C2D0C6BD000C02D5E /* idealistaChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = idealistaChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E8FA52F2D0C6BD000C02D5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1E8FA5312D0C6BD000C02D5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -291,6 +296,7 @@
 			children = (
 				1E8FA5A42D0F4E0B00C02D5E /* ListViewController.swift */,
 				1E8FA5A62D0F4E5000C02D5E /* ListViewModel.swift */,
+				1E62E2E72D0FCC8D003D10EB /* PropertyCell.swift */,
 			);
 			path = list;
 			sourceTree = "<group>";
@@ -323,6 +329,8 @@
 			children = (
 				1E8FA5A92D0F4F3300C02D5E /* UIViewExtensions.swift */,
 				1E8FA5AD2D0F523600C02D5E /* UIViewControllerExtensions.swift */,
+				1E62E2E52D0FC954003D10EB /* SequenceExtensions.swift */,
+				1E62E2E92D0FD37A003D10EB /* UIImageViewExtensions.swift */,
 			);
 			path = extensions;
 			sourceTree = "<group>";
@@ -471,13 +479,15 @@
 				1E8FA5AE2D0F523600C02D5E /* UIViewControllerExtensions.swift in Sources */,
 				1E9AF74D2D0FB30700CC7EAF /* Property.swift in Sources */,
 				1E8FA5AA2D0F4F3300C02D5E /* UIViewExtensions.swift in Sources */,
+				1E62E2E62D0FC954003D10EB /* SequenceExtensions.swift in Sources */,
 				1E8FA56C2D0F47F200C02D5E /* Environment.swift in Sources */,
+				1E62E2EA2D0FD37A003D10EB /* UIImageViewExtensions.swift in Sources */,
 				1E8FA5A72D0F4E5000C02D5E /* ListViewModel.swift in Sources */,
 				1E8FA5762D0F4C5200C02D5E /* MainProtocol.swift in Sources */,
 				1E8FA57E2D0F4C8800C02D5E /* PersistenceManager.swift in Sources */,
 				1E8FA5302D0C6BD000C02D5E /* AppDelegate.swift in Sources */,
+				1E62E2E82D0FCC8D003D10EB /* PropertyCell.swift in Sources */,
 				1E8FA5AC2D0F515200C02D5E /* SettingsViewController.swift in Sources */,
-				1E8FA53A2D0C6BD000C02D5E /* idealistaChallenge.xcdatamodeld in Sources */,
 				1E9AF7512D0FB73A00CC7EAF /* PropertyLocalDatasource.swift in Sources */,
 				1E8FA5672D0F47A700C02D5E /* Json.swift in Sources */,
 				1E8FA5782D0F4C7800C02D5E /* Observable.swift in Sources */,

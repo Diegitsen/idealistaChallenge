@@ -11,17 +11,17 @@ import Foundation
 class PropertyLocalDatasource {
         
     func saveProperty(cloudProperty: CloudProperty) async -> PropertyEntity {
-        let property = PropertyEntity.fetchSingleOrCreate(cloudPerformance: cloudPerformanceResponse)
-        await cloudPerformanceResponse.items.asyncForEach { performanceItemsBody in
-            await MainActor.run {  _ = PerformanceItem.fetchSingleOrCreate(performance: performance, cloudPerformanceItemResponse: performanceItemsBody) }
+        let property = PropertyEntity.fetchSingleOrCreate(cloudProperty: cloudProperty)
+        await cloudProperty.multimedia.images.asyncForEach { image in
+            await MainActor.run {  _ = PropertyPictureEntity.fetchSingleOrCreate(propertyEntity: property, image: image) }
         }
         await PersistenceManager.shared.save()
-        return performance
+        return property
     }
     
-    func getPerformances() -> [Performance] {
-        let performances = PersistenceManager.shared.fetch(Performance.self)
-        return performances
+    func getProperties() -> [PropertyEntity] {
+        let properties = PersistenceManager.shared.fetch(PropertyEntity.self)
+        return properties
     }
     
 }
